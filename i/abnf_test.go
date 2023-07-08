@@ -1,13 +1,13 @@
-package abnf_test
+package i_test
 
 import (
+	"github.com/0x51-dev/ri/i"
 	"github.com/0x51-dev/upeg/parser"
 	"github.com/0x51-dev/upeg/parser/op"
-	"github.com/0x51-dev/uri/abnf"
 	"testing"
 )
 
-func TestParseURI(t *testing.T) {
+func TestParseIRI(t *testing.T) {
 	for _, test := range []string{
 		"ftp://ftp.is.co.za/rfc/rfc1808.txt",
 		"http://www.ietf.org/rfc/rfc2396.txt",
@@ -22,7 +22,7 @@ func TestParseURI(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		if _, err := p.Parse(op.And{abnf.URI, op.EOF{}}); err != nil {
+		if _, err := p.Parse(op.And{i.IRI, op.EOF{}}); err != nil {
 			t.Fatal(err)
 		}
 	}

@@ -1,4 +1,4 @@
-module github.com/0x51-dev/uri
+module github.com/0x51-dev/ri
 
 go 1.20
 
