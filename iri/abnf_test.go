@@ -1,13 +1,13 @@
-package u_test
+package iri_test
 
 import (
-	"github.com/0x51-dev/ri/u"
+	"github.com/0x51-dev/rids/iri"
 	"github.com/0x51-dev/upeg/parser"
 	"github.com/0x51-dev/upeg/parser/op"
 	"testing"
 )
 
-func TestParseURI(t *testing.T) {
+func TestParseIRI(t *testing.T) {
 	for _, test := range []string{
 		"ftp://ftp.is.co.za/rfc/rfc1808.txt",
 		"http://www.ietf.org/rfc/rfc2396.txt",
@@ -22,7 +22,7 @@ func TestParseURI(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		if _, err := p.Parse(op.And{u.URI, op.EOF{}}); err != nil {
+		if _, err := p.Parse(op.And{iri.IRI, op.EOF{}}); err != nil {
 			t.Fatal(err)
 		}
 	}

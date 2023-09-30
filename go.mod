@@ -1,5 +1,5 @@
-module github.com/0x51-dev/ri
+module github.com/0x51-dev/rids
 
 go 1.20
 
-require github.com/0x51-dev/upeg v0.0.0-20230701175822-e5c708492aec
+require github.com/0x51-dev/upeg v0.1.0

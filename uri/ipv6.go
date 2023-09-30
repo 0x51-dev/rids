@@ -1,4 +1,4 @@
-package u
+package uri
 
 import (
 	"fmt"
